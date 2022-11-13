@@ -10,20 +10,28 @@
     <title>Hello, world!</title>
         </head>
     <body>
+        
+        <header>
+          <h1>Youtube Video Downloader</h1>
+        </header>
         <div class="container">
-        <header></header>
-        <main><div class="card">
-            <h5 class="card-header">Featured</h5>
+        <main>
+          <div class="card">
+            <h5 class="card-header">Download Youtube Videos!</h5>
             <div class="card-body">
-              <h5 class="card-title">Download Youtube Videos!</h5>
+              <h5 class="card-title">Paste in the youtube URL below.</h5>
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="insert youtube Url" aria-label="Recipient's username" aria-describedby="button-addon2" id="url">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="download_video()">Download</button>
+                <button id="download" class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="download_video()">Submit</button>
+                <a href="" id="video" download>Download</a>
+              
               </div>
             </div>
-          </div></main>
-        <footer></footer>
-    </div>
+          </div>
+        </main>
+      </div>
+        <footer><p>brought to you by OPT3D</p></footer>
+    
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
