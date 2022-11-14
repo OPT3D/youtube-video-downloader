@@ -7,28 +7,39 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>Hello, world!</title>
+    <title>Youtube Downloader</title>
         </head>
     <body>
         
-        <header>
-          <h1>Youtube Video Downloader</h1>
+         <header>
+         <img  class="logo" src="{{ url_for('static', filename='images/tylogo.png') }}" alt="">
         </header>
         <div class="container">
-        <main>
+        <div class="main">
           <div class="card">
             <h5 class="card-header">Download Youtube Videos!</h5>
             <div class="card-body">
               <h5 class="card-title">Paste in the youtube URL below.</h5>
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="insert youtube Url" aria-label="Recipient's username" aria-describedby="button-addon2" id="url">
-                <button id="download" class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="download_video()">Submit</button>
-                <a href="" id="video" download>Download</a>
-              
+              <div class="card-colunmn flex">
+              <div class="column-wide flex-column">
+                <input type="text" class="form-control box-shadow" placeholder="insert youtube Url" aria-label="Recipient's username" aria-describedby="button-addon2" id="url">
+                <p id="title1"></p>
+                <img class="hidden" id="thumbnail" src="" alt="Image of the Thumbnail">
+               
               </div>
+              <div class="column-short flex-column">
+              <button id="send_url" class="btn btn-danger box-shadow" type="button" id="button-addon2" onclick="get_video_info()">Submit</button>
+               <ul id = "download-types" class="list-group hidden">
+                <li onclick="download_video(18)" value="18" class="list-group-item list-group-item-action"> <div class="flex"><div class ="column-list">360p</div>Download<div class ="column-list"><img  class="" src="{{ url_for('static', filename='images/download.png') }}" alt=""></div></div></li>
+                <li onclick="download_video(22)" value="22" class="list-group-item list-group-item-action"> <div class="flex"><div class ="column-list">720p</div>Download<div class ="column-list"><img  class="" src="{{ url_for('static', filename='images/download.png') }}" alt=""></div></div></li>
+                <li onclick="download_video(137)" value="137" class="list-group-item list-group-item-action"> <div class="flex"><div class ="column-list">1080p</div>Download<div class ="column-list"><img  class="" src="{{ url_for('static', filename='images/download.png') }}" alt=""></div></div></li>
+                <li class="hidden"><a href="" id="video-to-download" download></a></li>
+              </ul>
+             
+            </div>
             </div>
           </div>
-        </main>
+        </div>
       </div>
         <footer><p>brought to you by OPT3D</p></footer>
     

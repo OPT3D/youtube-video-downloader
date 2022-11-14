@@ -4,10 +4,100 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     min-height: 100%;
+    min-width: 320px;
+    background-color: rgba(15, 15, 15, 0.788);
 }
 
+header {
+    background-color: rgb(29, 29, 29);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo {
+    height: 50px;
+    padding-left: 20px;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgb(10, 10, 10);
+    min-width: 320px;
+    width: 800px;
+    border: none;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(31, 31, 31);
+    min-width: 100%;
+    padding: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.836);
+
+
+}
 footer {
     background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.box-shadow {
+    box-shadow: 0 0 2px 1px rgba(17, 17, 17, 0.692);
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.card-colunmn {
+    min-width: 320px;
+}
+
+#send_url {
+    margin-bottom: 8px;
+}
+
+.column-wide {
+    width: 55%;
+    min-width: 100px;
+}
+
+.column-short {
+    width: 40%;
+    min-width: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+#thumbnail {
+    width: 80%;
+}
+
+#title1 {
+    
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
 }
