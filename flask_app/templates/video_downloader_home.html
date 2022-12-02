@@ -11,8 +11,8 @@
         </head>
     <body>
         
-         <header>
-         <img  class="logo" src="{{ url_for('static', filename='images/tylogo.png') }}" alt="">
+        <header>
+        <img  class="logo" src="{{ url_for('static', filename='images/tylogo.png') }}" alt="">
         </header>
         <div class="container">
         <div class="main">
@@ -25,17 +25,16 @@
                 <input type="text" class="form-control box-shadow" placeholder="insert youtube Url" aria-label="Recipient's username" aria-describedby="button-addon2" id="url">
                 <p id="title1"></p>
                 <img class="hidden" id="thumbnail" src="" alt="Image of the Thumbnail">
-               
+
               </div>
               <div class="column-short flex-column">
               <button id="send_url" class="btn btn-danger box-shadow" type="button" id="button-addon2" onclick="get_video_info()">Submit</button>
-               <ul id = "download-types" class="list-group hidden">
+              <ul id = "download-types" class="list-group hidden">
                 <li onclick="download_video(18)" value="18" class="list-group-item list-group-item-action"> <div class="flex"><div class ="column-list">360p</div>Download<div class ="column-list"><img  class="" src="{{ url_for('static', filename='images/download.png') }}" alt=""></div></div></li>
                 <li onclick="download_video(22)" value="22" class="list-group-item list-group-item-action"> <div class="flex"><div class ="column-list">720p</div>Download<div class ="column-list"><img  class="" src="{{ url_for('static', filename='images/download.png') }}" alt=""></div></div></li>
                 <li onclick="download_video(137)" value="137" class="list-group-item list-group-item-action"> <div class="flex"><div class ="column-list">1080p</div>Download<div class ="column-list"><img  class="" src="{{ url_for('static', filename='images/download.png') }}" alt=""></div></div></li>
                 <li class="hidden"><a href="" id="video-to-download" download></a></li>
               </ul>
-             
             </div>
             </div>
           </div>
